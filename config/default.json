@@ -1,3 +1,4 @@
 {
-    "jwtKey":"jwtParivateKey"
+    "jwtKey":"jwtParivateKey",
+    "url":"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=12.3250919158343,76.6741126151245&radius=2000&type=mosque&key=AIzaSyDzAOtqO0Dk2gJuo6VYAOlc_2w76RwD8CU"
 }
