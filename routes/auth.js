@@ -3,7 +3,7 @@ const Joi = require('joi');
 const router = express.Router();
 const _ = require('lodash');
 const {User} = require('../models/user');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 
 
 router.post('/',async (req,res)=>{
