@@ -4,14 +4,16 @@ const jwt = require('jsonwebtoken');
 const config = require('config');
 
 const userSchema = new mongoose.Schema({
-    name:{type:String, required:true, minlength:3},
+    displayName:{type:String, required:true, minlength:4},
     isActive:{type:Boolean,default:true},
     email:{type:String,required:true,unique:true,minlength:5},
     password:{type:String,required:true,minlength:5},
-    isAdmin:Boolean
+    isAdmin:Boolean,
+    interests:[String],
+    skills:[String]
 });
 userSchema.methods.generateAuthToken = function(){
-    return jwt.sign({_id:this._id,isAdmin:this.isAdmin},config.get('jwtKey'));
+    return jwt.sign({_id:this._id,isAdmin:this.isAdmin},config.get('jwtKey'  ));
 }
 const User = mongoose.model('User', userSchema);
 
